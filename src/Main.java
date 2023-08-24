@@ -30,8 +30,8 @@ public class Main {
         byte pupAs = 27;
         byte pupEa = 30;
         short paper = 480;
-        int pupils = (pupLp + pupAs + pupEa);
-        int papFor1 = (paper / pupils);
+        int pupils = pupLp + pupAs + pupEa;
+        int papFor1 = paper / pupils;
         System.out.println("На каждого ученика расчитано " + papFor1 + " листов бумаги");
 
 //Task 4
@@ -76,20 +76,19 @@ public class Main {
         int oneEgg = 70;
         int sumEgg = egg * oneEgg;
 
-        System.out.println("Вес завтака в граммах составит " + (sumBanana + sumMilk + sumIceCream + sumEgg));
+        int breakfast = sumBanana + sumMilk + sumIceCream + sumEgg;
+        System.out.println("Вес завтака в граммах составит " + breakfast);
 
         float kg = 1000f;
-        int breakfast = sumBanana + sumMilk + sumIceCream + sumEgg;
         float kgBreakfast = breakfast / kg;
-
         System.out.println("Вес завтрака в килограммах составит " + kgBreakfast);
 
 //Task 7
         double loseAday1 = 250 / kg;
         double loseAday2 = 500 / kg;
         int planLose = 7;
-        double totalDayLose1 = planLose / loseAday1;
-        double totalDayLose2 = planLose / loseAday2;
+        int totalDayLose1 = (int) (planLose / loseAday1);
+        int totalDayLose2 = (int) (planLose / loseAday2);
 
         System.out.println("Если спортсмен будет терять каждый день " + loseAday1 + " килограмм, то на похудение уйдет " + totalDayLose1 + " дней");
         System.out.println("Если спортсмен будет терять каждый день " + loseAday2 + " килограмм, то на похудение уйдет " + totalDayLose2 + " дней");
@@ -99,24 +98,24 @@ public class Main {
         System.out.println("В среднем, если спортсмен будет терять каждый день " + avrgLoseAday + " килограмм, то на похудение уйдет " + avrgTotalDay + " дней");
 
 //Task 8
-        int year = 12;
+        int months = 12;
         int masha = 67760;
-        int mashaYear = masha * year;
+        int mashaYear = masha * months;
         int denis = 83690;
-        int denisYear = denis * year;
+        int denisYear = denis * months;
         int krist = 76230;
-        int kristYear = krist * year;
+        int kristYear = krist * months;
 
         int mashaNew = masha + (masha * 10 / 100);
-        int mashaYearNew = mashaNew * year;
+        int mashaYearNew = mashaNew * months;
         int denisNew = denis + (denis * 10 / 100);
-        int denisYearNew = denisNew * year;
+        int denisYearNew = denisNew * months;
         int kristNew = krist + (krist * 10 / 100);
-        int kristYearNew = kristNew * year;
+        int kristYearNew = kristNew * months;
 
-        int diffMashaYear = mashaYearNew - mashaYear;
-        int diffDenisYear = denisYearNew - denisYear;
-        int diffKristYear = kristYearNew - kristYear;
+        float diffMashaYear = mashaYearNew - mashaYear;
+        float diffDenisYear = denisYearNew - denisYear;
+        float diffKristYear = kristYearNew - kristYear;
 
         System.out.println("Маша теперь получает " + mashaNew + " рублей. Годовой доход вырос на " + diffMashaYear + " рублей");
         System.out.println("Денис теперь получает " + denisNew + " рублей. Годовой доход вырос на " + diffDenisYear + " рублей");
